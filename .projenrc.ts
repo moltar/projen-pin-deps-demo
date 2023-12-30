@@ -15,6 +15,6 @@ project
   .deps
   .all
   .filter((dep) => dep.name.startsWith('@aws-sdk/'))
-  .map((dep) => project.deps.addDependency(`${dep.name}@3.484.0`, dep.type));
+  .map((dep) => project.addDevDeps(`${dep.name}@3.484.0`));
 
 project.synth();
