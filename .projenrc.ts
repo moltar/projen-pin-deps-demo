@@ -14,7 +14,7 @@ const project = new typescript.TypeScriptProject({
 project
   .deps
   .all
-  .filter((dep) =>dep.name.startsWith('@aws-sdk/'))
-  .map(dep => project.deps.addDependency(`${dep.name}@3.484.0`, dep.type));
+  .filter((dep) => dep.name.startsWith('@aws-sdk/'))
+  .map((dep) => project.deps.addDependency(`${dep.name}@3.484.0`, dep.type));
 
 project.synth();
